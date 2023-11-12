@@ -1,0 +1,1377 @@
+/* :root{
+    --bs-green: #04aa6d;
+    --bs-teal: #20c997;
+    --bs-black: #282a35;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    width: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", sans-serif;
+  width: 100%;
+}
+
+header {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  padding: 0px 25px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/************ utility class ******************/
+.btn {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/************** Adding background color in right side text button  ******************/
+.bg-white {
+  background-color: rgb(235, 229, 229);
+  color: black;
+}
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.bg-darkBlack {
+  background-color: #232222;
+  color: white;
+}
+.bg-pink {
+  background-color: pink;
+  color: black;
+}
+.bg-yellow {
+  background-color: yellow;
+  color: black;
+}
+.bg-lightYellow {
+  background-color: rgb(244, 244, 105);
+  color: black;
+}
+.bg-green {
+  background-color: green;
+  color: white;
+}
+.bg-lightGreen {
+  background-color: rgb(162, 206, 162);
+  color: black;
+}
+.bg-blue {
+  background-color: rgb(145, 145, 237);
+  color: black;
+}
+.bg-grayGreen {
+  background-color: rgb(180, 219, 103);
+  color: black;
+}
+.bg-gray {
+  background-color: rgb(181, 174, 174);
+  color: black;
+}
+.bg-blanchedalmond {
+  background-color: blanchedalmond;
+  color: black;
+}
+.bg-coral {
+  background-color: coral;
+  color: black;
+}
+.bg-darkorange {
+  background-color: rgb(240, 159, 60);
+  color: black;
+}
+.bg-lightblue {
+  background-color: lightblue;
+  color: black;
+}
+.bg-lightsteelblue {
+  background-color: lightsteelblue;
+  color: black;
+}
+.bg-darkkhaki {
+  background-color: darkkhaki;
+  color: black;
+}
+.bg-darkcyan {
+  background-color: darkcyan;
+  color: black;
+}
+.bg-limegreen {
+  background-color: limegreen;
+  color: black;
+}
+.bg-deepGreen {
+  background-color: rgb(37, 90, 37);
+  color: white;
+}
+
+/*********** learningzone-logo **************/
+.learningzone-logo {
+  width: 75px;
+  margin-right: 5px;
+}
+.learningzone-logo img {
+  width: 100%;
+}
+
+/********** for left header section *****************/
+.header-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* .header-left  */
+.menu-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 0px 16px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-left .menu-btn:hover {
+  background-color: rgb(94, 124, 136);
+  color: white;
+}
+
+.header-left .menu-btn:first-child {
+  padding: 0;
+}
+
+.header-left .menu-btn:first-child:hover {
+  background-color: transparent;
+}
+
+.fa-solid {
+  padding: 0px 3px;
+}
+
+/*********** for header right section ***************/
+.toggleLightDark {
+  transform: rotate(180deg);
+}
+.toggleLightDark:hover {
+  color: rgb(94, 124, 136);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 15px;
+}
+
+.header-right a {
+  font: 18px;
+  text-decoration: none;
+  border-radius: 60px;
+  padding: 5px 20px;
+  min-width: 50px;
+}
+
+/* .header-right a:last-child {
+  padding: 6px 45px;
+} */
+/* #login-btn{
+  padding: 5px 20px ;
+} */
+
+.header-right a:hover {
+  opacity: 0.6;
+}
+/******** If page can be do smaller then these helps to hide the button one-by-one. except login button *******/
+#upgrade-btn {
+  display: none;
+}
+#getCertified,
+#video-btn {
+  display: none;
+}
+#freeWebsite {
+  display: none;
+}
+#tutorial-btn,
+#references-btn,
+#exercise-btn {
+  display: none;
+}
+#menu-btn-mobile {
+  display: flex;
+}
+.toggleLightDark {
+  display: none;
+}
+.toggle_Search,
+.toggleTranslate {
+  display: none;
+}
+
+/********For making page responsive *************/
+@media all and (min-width: 1305px) {
+  #upgrade-btn {
+    display: block;
+  }
+}
+@media all and (min-width: 1200px) {
+  #getCertified,
+  #video-btn {
+    display: block;
+  }
+  #video-btn {
+    display: flex;
+  }
+}
+@media all and (min-width: 950px) {
+  #freeWebsite {
+    display: block;
+  }
+}
+
+@media all and (min-width: 850px) {
+  #tutorial-btn,
+  #references-btn,
+  #exercise-btn {
+    display: flex;
+  }
+  #menu-btn-mobile {
+    display: none;
+  }
+}
+
+/********Media query for Light and Dark mode button ****************/
+@media all and (min-width: 600px) {
+  .toggleLightDark {
+    display: block;
+  }
+}
+
+/******** Minimize login button  ************/
+@media all and (min-width: 425px) {
+  .header-right a:last-child {
+    padding: 6px 45px;
+  }
+}
+
+/****** media query for minimize search and translate button ********/
+@media all and (min-width: 375px) {
+  .toggle_Search,
+  .toggleTranslate {
+    display: block;
+  }
+}
+
+/****************  mobile - menu - container  ***********************/
+.mobile-menu-container {
+  background-color: rgb(207, 207, 203);
+  display: none;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mobile-menu-container ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.mobile-menu-container ul a {
+  padding-bottom: 22px;
+}
+.mobile-menu-container ul div {
+  padding-bottom: 22px;
+}
+
+.menu-btn-mobile_menu {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 550px;
+}
+
+.mobile-menu-close-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.mobile-menu-close-btn button {
+  border: none;
+  background-color: transparent;
+}
+
+.mobile-menu-close-btn i {
+  font-size: 30px;
+}
+
+.mobile-menu-nav-hidden {
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 850px) {
+  .mobile-menu-nav-hidden {
+    display: none;
+  }
+}
+
+/************ nested-navigation-container ************/
+.nested-navigation-container {
+  background-color: rgb(8, 8, 8);
+  color: white;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 100px;
+  display: none;
+  z-index: 30;
+}
+@media all and (min-width: 850px) {
+  .nested-navigation-container {
+    display: block;
+  }
+}
+
+.nested-navigation_container_close-btn {
+  position: absolute;
+  right: 0;
+}
+
+.nested-navigation_container_close-btn button {
+  font-size: 30px;
+  padding: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nested-navigation_container_close-btn button:hover {
+  background-color: white;
+  color: black;
+  padding-bottom: 30px;
+}
+
+/******* nested-navigation-container_content *******/
+.nested-navigation-container_content {
+  width: 80%;
+  /* background-color: #02442c; */
+  margin: auto;
+}
+.nested-navigation-container_content h1 {
+  /* margin-top: none; */
+  margin: 0;
+  padding: 15px;
+  color: rgb(245, 245, 96);
+}
+.nested-navigation-container_content_data {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+}
+.nested-navigation_item {
+  margin: 20px;
+}
+.nested-navigation_item h2 {
+  color: rgb(245, 245, 96);
+  margin-top: 5px;
+}
+.nested-navigation_item a {
+  display: block;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 550px;
+  padding: 5px 7px;
+}
+.nested-navigation_item a:hover {
+  background-color: rgb(219, 203, 203);
+  color: black;
+}
+.nested_navigation_hidden {
+  display: none;
+}
+
+/* *** mobile menu tutorial - (nested-navigation-container_content_mobile)*** */
+.mobile_menu_active {
+  background-color: rgb(153, 147, 147);
+  width: 95%;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px 10px;
+  padding: 5px 0px;
+}
+.nested-navigation-container_content_mobile {
+  background-color: black;
+  position: relative;
+  /* left: 10px;
+  right: 10px; */
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+}
+.nested-navigation-container_content_mobile h1 {
+  margin: 5px 0px;
+  color: rgb(245, 245, 96);
+  font-size: 22px;
+}
+.nested-navigation-container_content_mobile h2 {
+  margin: 7px 0px;
+  color: rgb(245, 245, 96);
+  font-size: 23px;
+}
+.nested-navigation-container_content_mobile a {
+  display: block;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px 7px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+.mobile_menuActive_tutorial {
+  display: none;
+}
+
+/* ****  Utility text class ********* */
+.text-white {
+  color: white;
+}
+/* ********************[ Navbar Content Codes Ended ]*********************************** */
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* ********************[ Starts Codes for Main Page Contents ]************************** */
+
+/* __________________________First Page Section _______________________ */
+.section_container {
+  width: 85%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.section_Heading {
+  background-color: #232222;
+}
+
+.section_Heading .section_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.section_Heading h1 {
+  font-size: 50px;
+  color: white;
+  margin: 0;
+}
+
+.section_Heading p {
+  color: pink;
+  font-size: 21px;
+  font-weight: 550;
+  text-align: center;
+}
+
+.section_Heading_search {
+  background-color: red;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section_Heading_search i {
+  background-color: #008000;
+  height: 40px;
+  width: 75px;
+  font-size: 25px;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.section_Heading_search input {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px 0px 0px 50px;
+  border: none;
+  outline: none;
+  padding: 0px 20px;
+  font-size: 16px;
+}
+
+/* css for ->Not Sure Where to Begin */
+.section_Heading a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 550;
+  margin: 30px 0px;
+}
+
+/* hover effect ->Not Sure Where to Begin?  */
+.section_Heading a:hover {
+  color: #008000;
+}
+
+/* media query for -> minimize and maximize view of page contents */
+@media all and (min-width: 800px) {
+  .section_Heading h1 {
+    font-size: 70px;
+  }
+  .section_Heading p {
+    font-size: 25px;
+  }
+}
+/* ____________________________________________________________________ */
+
+/*_______________________Second Page Section HTML _____________________ */
+
+/* second Page Left Section Code. */
+.section_html {
+  background-color: #c8dbd6;
+  padding: 1px;
+  position: relative;
+  top: -6px;
+  /* height: 530px; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.section_left {
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  max-width: 500px;
+}
+.section_left h1 {
+  font-size: 60px;
+  margin: 0;
+}
+.section_left p {
+  font-size: 22px;
+  font-weight: 550;
+}
+.section_left a {
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 550;
+  /* color: black; */
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+/* Second Page Right Section Code. */
+.section_right {
+  display: none;
+}
+@media all and (min-width: 1000px) {
+  .section_left h1 {
+    font-size: 90px;
+    margin: 0;
+  }
+  .section_left p {
+    font-size: 22px;
+    font-weight: 550;
+  }
+  .section_html {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+    /* height: 550; */
+  }
+  .section_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
+  .section_right {
+    display: block;
+    background-color: rgb(168, 156, 156);
+    width: 50%;
+    height: 100%;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.6),
+      5px 5px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-top: 45px;
+    color: black;
+  }
+  .editor {
+    background-color: white;
+    /* height: 300px; */
+    max-height: 100%;
+    min-height: 100%;
+    border-left: 5px solid #008000;
+    padding: 10px;
+  }
+  .editor_btn {
+    background-color: #008000;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 40px;
+    margin-top: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+/* ____________________________________________________________________ */
+
+/*_________________________ Third Page Section CSS ____________________ */
+/* section_css */
+.section_css {
+  background-color: rgb(167, 167, 106);
+  padding: 1px;
+  position: relative;
+  top: -6px;
+  /* height: 530px; */
+  display: flex;
+  justify-content: center;
+}
+@media all and (min-width: 1000px) {
+  .section_css {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+    /* height: 550; */
+  }
+}
+/* ____________________________________________________________________ */
+
+/* ____________________ Fourth Page Section JavaScript ________________ */
+/* section_javascript */
+.section_javascript {
+  background-color: rgb(104, 65, 138);
+  color: white;
+  padding: 1px;
+  position: relative;
+  top: -6px;
+  /* height: 530px; */
+  display: flex;
+  justify-content: center;
+}
+.section_javascript .section_left h1 {
+  font-size: 80px;
+}
+.section_left .paragraph_four p {
+  font-size: 21px;
+  font-weight: 550;
+}
+@media all and (min-width: 1000px) {
+  .section_javascript {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+  }
+}
+/* ____________________________________________________________________ */
+
+/*_____________________ Fifth Page Section Python _____________________ */
+/* section_python */
+.section_python {
+  background-color: rgb(149, 218, 159);
+  padding: 1px;
+  position: relative;
+  top: -6px;
+  display: flex;
+  justify-content: center;
+}
+.section_python .editor {
+  height: 200px;
+}
+@media all and (min-width: 1000px) {
+  .section_python {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+  }
+}
+/* _____________________________________________________________________ */
+
+/*_____________________ Sixth Page Section SQL _____________________ */
+/* section_python */
+.section_sql {
+  background-color: rgb(164, 160, 230);
+  padding: 1px;
+  position: relative;
+  top: -6px;
+  display: flex;
+  justify-content: center;
+}
+.section_sql .editor {
+  height: 200px;
+}
+@media all and (min-width: 1000px) {
+  .section_sql {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+  }
+}
+/* _____________________________________________________________________ */
+
+/* ********************[ Main Page Contents Codes Closed ]*********************************** */
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* ********************[ Starts Codes for Course Card Containers ]************************* */
+/* courses_card_containers */
+.courses_card_containers {
+  background-color: #232222;
+  padding: 50px 10px;
+  position: relative;
+  top: -6px;
+}
+
+/* courses_bigCard */
+.courses_bigCard {
+  display: grid;
+  text-align: center;
+  gap: 15px;
+}
+.courses_bigCard div {
+  padding: 50px 0px;
+  border-radius: 5px;
+}
+.courses_bigCard h2 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.courses_bigCard p {
+  font-size: 20px;
+}
+.courses_bigCard button {
+  font-size: 18px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* courses_middleCard */
+.courses_middleCard {
+  margin-top: 15px;
+  display: grid;
+  text-align: center;
+  gap: 15px;
+}
+.courses_middleCard a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 25px 0;
+  border-radius: 5px;
+}
+
+/* courses_smallCard */
+.courses_smallCard {
+  margin-top: 15px;
+  display: grid;
+  text-align: center;
+  gap: 15px;
+}
+.courses_smallCard a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 50px 0;
+  border-radius: 5px;
+}
+
+@media all and (min-width: 600px) {
+  .courses_smallCard {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas: auto;
+    grid-template-rows: auto;
+    /* gap: 70px; */
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .courses_card_containers {
+    padding: 50px 40px;
+  }
+  .courses_bigCard {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 70px;
+  }
+  .courses_middleCard {
+    margin-top: 70px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 70px;
+  }
+  .courses_smallCard {
+    margin-top: 70px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 70px;
+  }
+}
+
+/* Code Editor Part */
+.codeEditor_part {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 100px;
+}
+.codeEditor_part h1 {
+  color: white;
+  font-size: 65px;
+  margin-bottom: 0;
+}
+.codeEditor_part p {
+  color: white;
+  font-size: 21px;
+}
+
+/* Create threee dot */
+.codeEditor_dot {
+  padding: 8px;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+/* Three dot */
+.codeEditor_part_left {
+  width: 100%;
+  max-width: 200px;
+  text-align: left;
+}
+
+/* add link in text - www.learningzone.com/try/tryit/ */
+.codeEditor_part_right {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 3px;
+  text-align: left;
+}
+.codeEditor_part_container {
+  background-color: rgb(168, 156, 156);
+  /* height: 380px; */
+  border-radius: 5px;
+  padding: 10px;
+}
+.codeEditor_part_container_top {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Code for Fronend & Backend text inside editor */
+.codeEditor_condition {
+  text-align: left;
+  display: flex;
+  /* padding: 10px; */
+}
+.codeEditor_condition div {
+  font-size: 18px;
+  font-weight: 550;
+  padding: 10px;
+  cursor: pointer;
+}
+.codeEditor_condition .active {
+  background-color: rgb(84, 87, 84);
+}
+#animationCodeEditorPart {
+  width: 100%;
+}
+.codeEditor_Btn-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-codeEditor_down {
+  display: block;
+  margin-top: 20px;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Create Spaces - LearningZone Spaces */
+.Learning_Zone_container {
+  width: 100%;
+  max-width: 850px;
+  /* background-color: red; */
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.Learning_Zone_container h1 {
+  color: white;
+  font-size: 65px;
+  margin-bottom: 0;
+}
+.Learning_Zone_container img {
+  width: 100%;
+}
+
+.Learning_Zone_container p {
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+}
+/* add link inside paragraph */
+.Learning_Zone_container .link_inside_space {
+  color: orange;
+  text-decoration: none;
+}
+.how_it_work_img {
+  margin-top: 50px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+/* code for -learn more Btn */
+.getStartedNowBtn {
+  font-size: 25px;
+  width: 100%;
+  max-width: 250px;
+  padding: 5px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+/* **********************[ courses_card_containers section closed ]********************** */
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* ********************[ Starts Codes for My Learning Page Section. ]********************* */
+
+/* Create My Learning Page Section  */
+.learning_section {
+  background-color: #d9eee1;
+  text-align: center;
+  padding: 50px 0px;
+  position: relative;
+  top: -6px;
+}
+.learning_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+}
+.learning_container h1 {
+  font-size: 65px;
+  margin-bottom: 0;
+}
+.learning_container P {
+  font-size: 21px;
+}
+.learning_container img {
+  margin: 20px 0;
+}
+.learning_section a {
+  display: block;
+}
+.signupFree {
+  align-self: center;
+  padding: 10px 65px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+/* ____________________ Create My Learning page Closed _________________________ */
+
+/* Become a PRO User Section */
+/* ______________________Become a PRO User Section closed ______________________ */
+
+/* Color Picker Section */
+.colorSection {
+  padding: 50px 0px;
+  text-align: center;
+  background-color: rgb(196, 238, 112);
+  margin-top: -6px;
+}
+.colorSection h1 {
+  font-size: 65px;
+}
+.colorSection p {
+  font-size: 23px;
+  font-weight: 700;
+}
+.colorSection img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* ______________________ Color Picker Section Closed ______________________ */
+
+/* Code Game Section */
+.codeGame_container {
+  text-align: center;
+  background-color: skyblue;
+  margin-top: -20px;
+  padding: 50px 0px;
+}
+.codeGame_container h1 {
+  font-size: 65px;
+  margin: 0;
+  font-family: "Freckle Face", cursive;
+}
+.codeGame_container p {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Freckle Face", cursive;
+}
+.codeGame_container button {
+  padding: 12px 65px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  margin-top: 25px;
+}
+.codeGameBtn_container button a {
+  color: white;
+  text-decoration: none;
+}
+.codeGameBtn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ______________________ Code Game Section Closed ______________________ */
+
+/* Exercises and Quizzes Section */
+.section_exercise {
+  background-color: #232222;
+  padding: 50px 20px;
+}
+.section_exercise_container {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.section_exercise_container h1 {
+  font-size: 65px;
+  margin: 0;
+  color: white;
+}
+.section_exercise_container p {
+  font-size: 23px;
+  font-weight: 700;
+  color: white;
+}
+.section_exercise_quiz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 30px;
+}
+.section_exercise_quiz a {
+  min-width: 200px;
+  flex: 1;
+  padding: 60px;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+@media all and (min-width: 1000px) {
+  .section_exercise_quiz {
+    gap: 70px;
+  }
+}
+/* ______________________ Exercises and Quizzes Section Closed ______________________ */
+
+/* Web Templates Section */
+.webTemplate {
+  background-color: #e7e9eb;
+  padding: 50px 20px;
+}
+.web_template_container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.web_template_container img {
+  width: 100%;
+}
+.web_template_container h1 {
+  font-size: 65px;
+  margin: 0;
+}
+.web_template_container p {
+  font-size: 23px;
+  font-weight: 700;
+}
+.webTemplateLink {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 25px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+.webTemplateLink:hover {
+  opacity: 0.7;
+}
+/* ______________________ Web Templates Section Closed ______________________ */
+
+/* How To Section Part */
+.howtosection_section {
+  padding: 50px 10px;
+  background-color: rgb(210, 210, 139);
+  text-align: center;
+}
+.howtosection_container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+.howtosection_container h1 {
+  font-size: 65px;
+  margin: 0;
+}
+.howtosection_container p {
+  font-size: 23px;
+  font-weight: 600;
+}
+.howtosection_list {
+  display: flex;
+  overflow: hidden;
+}
+.howtosection_item {
+  transform: translateX(-0%);
+  position: relative;
+}
+.howtosection_ImageSlider {
+  position: relative;
+}
+.howtosection_button {
+  position: absolute;
+  top: 0;
+  bottom: 70px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.howtosection_button button {
+  font-size: 20px;
+  border: none;
+  color: white;
+  background: transparent;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.howtosection_button button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.howtosection_active_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+.howtosection_active_image div {
+  padding: 10px;
+  background-color: rgb(213, 195, 195);
+  margin: 3px;
+  border-radius: 10px;
+}
+.howtosection_active_image .imageSliderActive {
+  background-color: rgb(105, 90, 90);
+}
+.howtosection_item p:first-child {
+  position: absolute;
+  top: 0;
+  color: rgb(216, 199, 199);
+  padding: 10px;
+}
+.howtosection_item p:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgb(216, 199, 199);
+}
+/* create stand for how to section part */
+.howtosection_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.verticalBox {
+  width: 55px;
+  height: 70px;
+  background-color: #232222;
+}
+.howtosection_bottom a {
+  background-color: #232222;
+  color: white;
+  display: block;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  font-size: 21px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.howtosection_bottom a:hover {
+  background-color: green;
+}
+/* ______________________ How To Section Part Closed ______________________ */
+
+/* Footer Section */
+.footer_section {
+  background-color: #232222;
+  padding: 60px 30px;
+}
+.footer_section a {
+  color: currentColor;
+}
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer_top .menu_footer {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer_top .menu_footer a {
+  background-color: white;
+  font-size: 18px;
+  font-weight: 550;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#topFooterMenu1,
+#topFooterMenu2,
+#topFooterMenu3 {
+  width: 120px;
+  text-align: center;
+}
+
+@media all and (max-width: 400px) {
+  .footer_top .menu_footer a {
+    background-color: white;
+    font-size: 18px;
+    font-weight: 550;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+    display: block;
+  }
+  .footer_top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer_top .menu_footer {
+    margin-bottom: 10px;
+  }
+  #topFooterMenu1,
+  #topFooterMenu2,
+  #topFooterMenu3 {
+    width: auto;
+    text-align: center;
+  }
+}
+
+.ForumAndAbout {
+  color: white;
+}
+.ForumAndAbout a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+.ForumAndAbout a:first-child {
+  border-right: 2px solid white;
+}
+.socialMedia {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.socialMedia a {
+  font-size: 20px;
+  margin: 15px 10px;
+}
+.footer_description {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+.footer_graduCap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  margin: 15px;
+}
